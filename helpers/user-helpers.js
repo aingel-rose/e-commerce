@@ -45,7 +45,7 @@ const addToCart = (proId, userId) => {
       quantity:1,
     }
 
- 
+
   return new Promise(async (resolve, reject) => {
     let userCart = await db
       .get()
