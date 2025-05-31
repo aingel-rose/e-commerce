@@ -53,6 +53,7 @@ const addToCart = (proId, userId) => {
       .findOne({ user: new ObjectId(userId) });
     console.log(userCart);
     if (userCart) {
+      let proExit=userCart.products.findOne(product=> product.item==pro)
       db.get()
         .collection(CART_COLLECTIONS)
         .updateOne(
