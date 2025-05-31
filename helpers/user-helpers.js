@@ -58,7 +58,7 @@ const addToCart = (proId, userId) => {
         .updateOne(
           { user: new ObjectId(userId) },
           {
-            $push: { products: new ObjectId(proObj) },
+            $push: { products:proObj},
           }
         )
         .then((response) => {
